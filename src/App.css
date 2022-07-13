@@ -177,13 +177,13 @@ img {
 .PText {
   max-width: 500px;
   margin: 0 auto;
-  font-size: 1.8rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
 }
 
 @media screen and (max-width: 768px) {
   .PText {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -298,26 +298,46 @@ FaFacebookSquare color="#3b5998"
 
 /* HERO SECTION */
 .hero {
-  margin-top: -50px;
-  height: 100vh;
-  min-height: 1050px;
+  padding: 10rem 0;
   width: 100%;
   text-align: center;
+}
+
+.hero .hero-top {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  gap: 2rem;
+}
+
+.hero .hero-img {
+  flex: 1;
+}
+
+.hero .hero-info {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hero .hero-info .PText {
+  width: 100%;
+  margin-top: 0.8rem;
+  max-width: 100%;
+  text-align: left;
 }
 
 .hero .hero-heading {
   font-size: 1.5rem;
   margin-bottom: 0rem;
-  position: relative;
 }
 
 .hero .hero-heading span {
   display: inline-block;
   width: 100%;
+  text-align: left;
 }
 
 .hero .hero-heading .hero-name {
@@ -326,28 +346,25 @@ FaFacebookSquare color="#3b5998"
   font-weight: 700;
 }
 
-.hero .hero-img {
-  max-width: 800px;
-  width: 100%;
-  height: 600px;
-  margin: 0 auto;
-}
-
-.hero .hero-img img {
-  width: 100%;
-  height: 100%;
-  /* object-fit: cover; */
-}
-
-.hero .hero-info {
-  margin-top: -15rem;
-}
-
 .hero .social-media-icons {
-  margin-top: 2rem;
+  margin-top: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero .MyButton {
+  margin-top: 0.5rem;
+  width: 100%;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.hero .hero-img img {
+  border-radius: 50%;
+  height: 350px;
+  object-fit: cover;
+  object-position: top;
 }
 
 .hero .MyButton .link-button {
@@ -368,8 +385,7 @@ FaFacebookSquare color="#3b5998"
   }
 
   .hero .hero-img {
-    height: 300px;
-    max-width: 400px;
+    display: none;
   }
 
   .hero .hero-info {

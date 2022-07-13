@@ -115,10 +115,13 @@ function Projects() {
             <div className="personal-info">
               <h1>Sani's Projects</h1>
               <Ptext>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                neque inventore voluptatum officiis? Laudantium amet iure
-                tenetur. Delectus doloremque quos earum, sunt adipisci ex
-                recusandae, hic impedit deserunt autem non.
+                As a self-taught developer, i can only develop my skills with
+                lots and lots of practices and taking on challenging tasks from
+                the internet. I have worked on many projects, from the
+                development of basic HTML page to developing and designing more
+                complex and functionable websites including a real-time chat
+                application. Below are some of the projects i have worked on
+                with their source codes hosted on GitHub.
               </Ptext>
             </div>
             <MyButton

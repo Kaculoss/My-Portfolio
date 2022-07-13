@@ -15,10 +15,11 @@ export default function AboutSection() {
             heading="About Me"
           />
           <Ptext>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
-            veritatis temporibus nihil quam error molestiae iusto deserunt
-            quibusdam fugiat quae impedit ea vel nulla, ullam illo aperiam
-            accusantium cupiditate animi!
+            As a freelance web designer and developer from Ghana, I create
+            professional and high performance websites for my clients. I always
+            try to show unique views to the audience through my design because I
+            love art. And with my love for critical thinking, I always welcome
+            new challenging tasks.
           </Ptext>
           <div className="aboutSection-btns">
             <MyButton btnLink="/projects" btnText="Works" />

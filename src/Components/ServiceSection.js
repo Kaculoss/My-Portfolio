@@ -12,12 +12,12 @@ export default function ServiceSection() {
           <ServicesSectionItem
             icon={<MdDesktopMac />}
             title="Website Design"
-            desc="I do ui/ux design for websites which makes the website looks good and unique from others."
+            desc="I do ui/ux design for websites which makes the website look good and unique from others."
           />
           <ServicesSectionItem
             icon={<MdCode />}
             title="Web Development"
-            desc="I also develop websites with blazing fast speed and high performance."
+            desc="I also to develop websites with blazing fast speed and high performance."
           />
           <ServicesSectionItem
             icon={<MdPhonelinkSetup />}

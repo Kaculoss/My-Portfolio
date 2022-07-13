@@ -13,10 +13,9 @@ export default function Footer() {
           <div className="footer-col footer-about">
             <h2>Sani Alhassan</h2>
             <Ptext>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-              nesciunt perspiciatis similique facilis ipsum perferendis
-              necessitatibus porro delectus nostrum, accusamus qui maiores
-              asperiores quia officia!
+              A freelance web designer and developer from Ghana. With a good
+              performance rate, I always make websites have unique designs with
+              exceptional functionality and responsiveness.
             </Ptext>
           </div>
           <div className="footer-col">
