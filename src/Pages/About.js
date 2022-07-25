@@ -51,7 +51,11 @@ export default function About() {
                 technology, it is now time to put my programming skills to work.
               </Ptext>
             </div>
-            <MyButton btnText="Download CV" btnLink="#" />
+            <MyButton
+              btnText="Download CV"
+              btnLink="/files/Sani Alhassan - Resume.pdf"
+              dload={true}
+            />
           </div>
           <div className="right">
             <img src="/images/Sani Red.jpg" alt="Sani" />

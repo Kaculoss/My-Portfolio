@@ -1,19 +1,47 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_rj6uydk",
+        "template_puesifb",
+        form.current,
+        "8q7QbqQ-vPDSu4ATz"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setName("");
+          setEmail("");
+          setMessage("");
+          toast.success("Email Message Sent!");
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Message not Sent, Please Try Again");
+        }
+      );
+  };
 
   return (
-    <div className="contactForm">
+    <form ref={form} className="contactForm" onSubmit={sendEmail}>
       <div className="form-group">
         <label htmlFor="name">
           Your Name
           <input
             type="text"
             id="name"
-            name="name"
+            name="user_name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -25,7 +53,7 @@ export default function ContactForm() {
           <input
             type="email"
             id="email"
-            name="email"
+            name="user_email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -43,6 +71,6 @@ export default function ContactForm() {
         </label>
       </div>
       <button type="submit">Send</button>
-    </div>
+    </form>
   );
 }

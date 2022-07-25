@@ -9,6 +9,8 @@ import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import SmoothScrollBar from "./Components/MovetoTop";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -25,6 +27,18 @@ function App() {
           <ScrollToTop />
           <ScrollToBottom />
           <Footer />
+          <ToastContainer
+            theme="colored"
+            position="top-center"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
         </SmoothScrollBar>
       </Router>
     </>
