@@ -202,6 +202,12 @@ img {
   text-transform: uppercase;
   font-weight: bolder;
   cursor: pointer;
+  transition: 2ms ease-out;
+}
+
+.MyButton .link-button:hover {
+  background: linear-gradient(90deg, #55e6fc9b, #0161c871);
+  color: #16293cb2;
 }
 
 .MyButton .outline-link-button {
@@ -209,6 +215,11 @@ img {
   outline: none;
   position: relative;
   z-index: 1;
+}
+
+.MyButton .outline-link-button::before:hover {
+  background-color: #16293c1b;
+  color: #bcbaba04;
 }
 
 .MyButton .outline-link-button::before {
