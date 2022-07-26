@@ -657,6 +657,11 @@ FaFacebookSquare color="#3b5998"
   width: 100%;
 }
 
+.projectItem .read-or-hide {
+  font-size: larger;
+  font-weight: bolder;
+}
+
 @media screen and (max-width: 768px) {
   .projectItem .projectItem-img {
     height: 350px;
@@ -1461,6 +1466,43 @@ FaFacebookSquare color="#3b5998"
   }
 }
 
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ERROR PAGE */
+.error-page {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.error-page img {
+  width: 90vw;
+  max-width: 600px;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.error-page h3 {
+  margin-bottom: 0.5rem;
+}
+
+.error-page p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #627d98;
+}
+
+.error-page a {
+  color: #3b82f6;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
 /* SMOOTH SCROLL */
 /* .myScrollBar {
   height: 100%;

@@ -10,8 +10,7 @@ export default function ProjectGroup({ projects }) {
       </div>
       <div className="main-projects">
         {projects.projects.map((project) => {
-          const { id, img, name } = project;
-          return <ProjectItem key={id} img={img} title={name} />;
+          return <ProjectItem key={project.id} {...project} />;
         })}
       </div>
     </div>

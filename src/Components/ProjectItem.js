@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function ProjectItem({
-  img = "/images/tours.png",
-  title = "Project Name",
-  desc = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque,vitae!",
-  linkToWeb = "/",
-  linkToCode = "/",
+  img,
+  name,
+  description,
+  webURL,
+  githubURL,
 }) {
+  const [readMore, setReadMore] = useState(true);
+
   return (
     <div className="projectItem">
       <a
-        href={linkToWeb}
+        href={webURL}
         target="_blank"
         rel="noreferrer"
         className="projectItem-img"
@@ -18,19 +20,33 @@ export default function ProjectItem({
         <img src={img} alt="project" />
       </a>
       <div className="projectItem-info">
-        <a href={linkToWeb} target="_blank" rel="noreferrer">
-          <h3 className="projectItem-title">{title}</h3>
+        <a href={webURL} target="_blank" rel="noreferrer">
+          <h3 className="projectItem-title">{name}</h3>
         </a>
-        <p className="projectItem-desc">{desc}</p>
+        {description.length < 100 ? (
+          <p className="projectItem-desc">{description}</p>
+        ) : (
+          <p className="projectItem-desc">
+            {readMore ? description.slice(0, 100) : description}
+            <span
+              onClick={() => setReadMore(!readMore)}
+              className="read-or-hide"
+            >
+              {readMore ? "...read more" : " show less"}
+            </span>
+          </p>
+        )}
         <div className="source-code">
-          <a
-            href={linkToCode}
-            target="_blank"
-            rel="noreferrer"
-            className="source-code"
-          >
-            Source Code
-          </a>
+          {githubURL && (
+            <a
+              href={githubURL}
+              target="_blank"
+              rel="noreferrer"
+              className="source-code"
+            >
+              Source Code
+            </a>
+          )}
         </div>
       </div>
     </div>

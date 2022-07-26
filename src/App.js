@@ -11,6 +11,7 @@ import Contact from "./Pages/Contact";
 import SmoothScrollBar from "./Components/MovetoTop";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Error from "./Pages/Error";
 
 function App() {
   return (
@@ -19,10 +20,11 @@ function App() {
         <NavMenu />
         <SmoothScrollBar>
           <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<Error />} />
           </Routes>
           <ScrollToTop />
           <ScrollToBottom />

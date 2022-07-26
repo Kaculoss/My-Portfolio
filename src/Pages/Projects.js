@@ -1,9 +1,7 @@
 import { projectData } from "../projectData";
 import { IconContext } from "react-icons";
-import { FaFileCode } from "react-icons/fa";
 import { MdSearch } from "react-icons/md";
 import SocialMediaIcons from "../Components/SocialMediaIcons";
-import MyButton from "../Components/MyButton";
 import ContactSection from "../Components/ContactSection";
 import Ptext from "../Components/Ptext";
 import MyRadioButton from "../Components/MyRadioButton";
@@ -11,7 +9,7 @@ import ProjectGroup from "../Components/ProjectGroup";
 import { useEffect, useState } from "react";
 
 function Projects() {
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState("Large-scale");
   const [viewProjects, setViewProjects] = useState(projectData.allProjects);
   const [searchText, setSearchText] = useState("");
 
@@ -124,15 +122,6 @@ function Projects() {
                 with their source codes hosted on GitHub.
               </Ptext>
             </div>
-            <MyButton
-              btnLink="/"
-              btnText={
-                <>
-                  <FaFileCode size="1.5em" />
-                  <span>Portfolio's Source Codes</span>
-                </>
-              }
-            />
           </div>
           <div className="projectPage-img">
             <img src="./images/head.webp" alt="head" />

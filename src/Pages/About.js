@@ -52,7 +52,7 @@ export default function About() {
               </Ptext>
             </div>
             <MyButton
-              btnText="Download CV"
+              btnText="Download Resume"
               btnLink="/files/Sani Alhassan - Resume.pdf"
               dload={true}
             />

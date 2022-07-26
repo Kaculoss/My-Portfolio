@@ -13,7 +13,7 @@ import { CSSTransition, SwitchTransition } from "react-transition-group";
 SwiperCore.use([Navigation]);
 
 export default function ProjectSection() {
-  const [category, setCategory] = useState("Basic");
+  const [category, setCategory] = useState("Large-scale");
   const [viewProjects, setViewProjects] = useState(projectData.allProjects[0]);
   const theProjects = {
     Basic: projectData.allProjects[0],
@@ -61,7 +61,7 @@ export default function ProjectSection() {
                 {viewProjects.projects.map((project) => {
                   return (
                     <SwiperSlide key={project.id}>
-                      <ProjectItem img={project.img} title={project.name} />
+                      <ProjectItem {...project} />
                     </SwiperSlide>
                   );
                 })}

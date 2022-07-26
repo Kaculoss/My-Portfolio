@@ -10,27 +10,30 @@ export default function ContactForm() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_rj6uydk",
-        "template_puesifb",
-        form.current,
-        "8q7QbqQ-vPDSu4ATz"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setName("");
-          setEmail("");
-          setMessage("");
-          toast.success("Email Message Sent!");
-        },
-        (error) => {
-          console.log(error.text);
-          toast.error("Message not Sent, Please Try Again");
-        }
-      );
+    if (!name || !email || !message) {
+      toast.warning("Please fill all fields");
+    } else {
+      emailjs
+        .sendForm(
+          "service_rj6uydk",
+          "template_puesifb",
+          form.current,
+          "8q7QbqQ-vPDSu4ATz"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setName("");
+            setEmail("");
+            setMessage("");
+            toast.success("Email Message Sent!");
+          },
+          (error) => {
+            console.log(error.text);
+            toast.error("Message not Sent, Please Try Again");
+          }
+        );
+    }
   };
 
   return (
