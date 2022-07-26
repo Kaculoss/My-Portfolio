@@ -133,6 +133,15 @@ export const projectData = {
         },
         {
           id: 3,
+          img: "/images/keezy-chat.jpg",
+          name: "keezy chat",
+          webURL: "https://keezy-chat-app.web.app",
+          githubURL: "",
+          description:
+            "A chat application. Although every signed user can chat on the community space of this application, the user will have to make friends on the app in other to chat them personally. send a friend request to the user and wait for him to accept it before you can both chat on the app. You can also create your personal spaces and add members from your friend list to chat as group. Login and send me a friend request on 'Sani Alhassan' so we can chat.",
+        },
+        {
+          id: 4,
           img: "/images/keezy-netflix.jpg",
           name: "netflix clone",
           webURL: "https://keezy-netflix.netlify.app",
@@ -141,7 +150,7 @@ export const projectData = {
             "As the name says, a nice clone of netflix's website. This website allows users to watch trailers of the movies they click on. The trailer will have to be available on Youtube first.",
         },
         {
-          id: 4,
+          id: 5,
           img: "/images/keezy-spotify.jpg",
           name: "spotify clone",
           webURL: "https://keezy-spotify.netlify.app",
